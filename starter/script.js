@@ -113,7 +113,7 @@ const bioData = {
 };
 
 
-console.log(bioData.bioDataSumary())
+//console.log(bioData.bioDataSumary())
 
 //
 
@@ -126,3 +126,31 @@ console.log(bioData.bioDataSumary())
 //Ola has 3 hobbies and his best hobby is reading
 
 //console.log(`${bioData.firstName} has ${bioData.hobbies.length} hobbies and his best hobby is ${bioData.hobbies[0]}.📚`)
+
+function isArmstrongNumber(num) {
+
+    
+    // Convert the number to a string to get its length
+    const numStr = num.toString();
+    const numDigits = numStr.length;
+
+    
+    // Calculate the sum of each digit raised to the power of the number of digits
+    let sum = 0;
+    for (let i = 0; i < numDigits; i++) {
+      sum = sum + Math.pow(parseInt(numStr.charAt(i)), numDigits);// for index 0 of string numStr sum = 0+(9^4)
+    }
+   
+  
+  
+    // Check if the sum is equal to the original number
+    if(num === sum){
+      return console.log(`${num} is an Amstrong Number`)
+    }
+    else{
+        return console.log(`${num} is not an Amstrong Number`)
+    }
+  }
+
+
+  (isArmstrongNumber(9473))
