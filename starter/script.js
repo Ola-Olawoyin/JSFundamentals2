@@ -79,38 +79,41 @@
 
 //Arrays
 
-// function calcAge1(birthYear){
+function calcAge1(birthYear){
    
-//     const age = currentYear - birthYear
+    const age = currentYear - birthYear
     
-//     return age
-// }
+    return age
+}
 
-// const years =[1990,1991,1992,1993,1994]
+const years =[1990,1991,1992,1993,1994]
+const age = [];
 
-// for(i=0; i<years.length; i++){
+for(let i=0; i<years.length; i++){
     
-//     console.log(calcAge1(years[i]))
-//}
+    age[i]=calcAge1(years[i])
+}
+
+console.log(age)
 
 
 //Objects
 
-const bioData = {
-    firstName: 'Ola',
-    lastName: 'Olawoyin',
-    birthYear: 1982,
-    job: 'QA Enginer',
-    hasDriversLicense: !false,
-    hobbies: ['Reading', 'Watching Football', 'Discussing politics'],
-    calcAge: function (){
-        this.age = currentYear - this.birthYear  
-        return this.age
-    },
-    bioDataSumary: function(){
-        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job} and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers licence`
-    }
-};
+// const bioData = {
+//     firstName: 'Ola',
+//     lastName: 'Olawoyin',
+//     birthYear: 1982,
+//     job: 'QA Enginer',
+//     hasDriversLicense: !false,
+//     hobbies: ['Reading', 'Watching Football', 'Discussing politics'],
+//     calcAge: function (){
+//         this.age = currentYear - this.birthYear  
+//         return this.age
+//     },
+//     bioDataSumary: function(){
+//         return `${this.firstName} is a ${this.calcAge()}-year old ${this.job} and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers licence`
+//     }
+// };
 
 
 //console.log(bioData.bioDataSumary())
@@ -127,30 +130,28 @@ const bioData = {
 
 //console.log(`${bioData.firstName} has ${bioData.hobbies.length} hobbies and his best hobby is ${bioData.hobbies[0]}.📚`)
 
-function isArmstrongNumber(num) {
-
-    
+//function isArmstrongNumber(num) {
     // Convert the number to a string to get its length
-    const numStr = num.toString();
-    const numDigits = numStr.length;
+    // const numStr = num.toString();
+    // const numDigits = numStr.length;
 
     
     // Calculate the sum of each digit raised to the power of the number of digits
-    let sum = 0;
-    for (let i = 0; i < numDigits; i++) {
-      sum = sum + Math.pow(parseInt(numStr.charAt(i)), numDigits);// for index 0 of string numStr sum = 0+(9^4)
-    }
+//     let sum = 0;
+//     for (let i = 0; i < numDigits; i++) {
+//       sum = sum + Math.pow(parseInt(numStr.charAt(i)), numDigits);// for index 0 of string numStr sum = 0+(9^4)
+//     }
    
   
   
-    // Check if the sum is equal to the original number
-    if(num === sum){
-      return console.log(`${num} is an Amstrong Number`)
-    }
-    else{
-        return console.log(`${num} is not an Amstrong Number`)
-    }
-  }
+//     // Check if the sum is equal to the original number
+//     if(num === sum){
+//       return console.log(`${num} is an Amstrong Number`)
+//     }
+//     else{
+//         return console.log(`${num} is not an Amstrong Number`)
+//     }
+//   }
 
 
-  (isArmstrongNumber(9473))
+//   (isArmstrongNumber(9473))
